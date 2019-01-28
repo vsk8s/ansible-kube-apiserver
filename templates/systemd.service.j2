@@ -1,0 +1,11 @@
+[Unit]
+Description=Kubernetes API Server
+
+[Service]
+EnvironmentFile=/etc/default/kube-apiserver
+ExecStart=/usr/bin/hyperkube apiserver $DAEMON_ARGS
+Restart=on-failure
+Type=notify
+
+[Install]
+WantedBy=multi-user.target

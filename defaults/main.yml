@@ -1,0 +1,14 @@
+--
+
+# Format for entries: https://IP:Port
+kube_apiserver_etcd_servers: []
+kube_apiserver_etcd_cafile: /path
+kube_apiserver_etcd_keyfile: /path
+kube_apiserver_etcd_certfile: /path
+
+kube_apiserver_service_net: "10.0.0.1/24"
+
+kube_apiserver_certfile: /path
+kube_apiserver_keyfile: /path
+kube_apiserver_cafile: /path
+kube_apiserver_client_ca: /path

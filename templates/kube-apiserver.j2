@@ -1,0 +1,13 @@
+DAEMON_ARGS="                                                               \
+--bind-address=0.0.0.0                                                      \
+--secure-port=443                                                           \
+--etcd-servers={{ kube_apiserver_etcd_servers | join(",") }}                \
+--etcd-cafile={{ kube_apiserver_etcd_cafile }}                              \
+--etcd-keyfile={{ kube_apiserver_etcd_keyfile }}                            \
+--etcd-certfile={{ kube_apiserver_etcd_certfile }}                          \
+--service-cluster-ip-range={{ kube_apiserver_service_net }}                 \
+--v=2                                                                       \
+--tls-cert-file={{ kube_apiserver_certfile }}                               \
+--tls-private-key-file={{ kube_apiserver_keyfile }}                         \
+--kubelet-certificate-authority={{ kube_apiserver_cafile }}                 \
+--client-ca-file={{ kube_apiserver_client_ca }}
