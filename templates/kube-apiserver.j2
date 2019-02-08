@@ -12,4 +12,5 @@ DAEMON_ARGS="                                                               \
 --tls-cert-file={{ kube_apiserver_certfile }}                               \
 --tls-private-key-file={{ kube_apiserver_keyfile }}                         \
 --kubelet-certificate-authority={{ kube_apiserver_cafile }}                 \
---client-ca-file={{ kube_apiserver_client_ca }}
+--client-ca-file={{ kube_apiserver_client_ca }}                             \
+"
