@@ -13,4 +13,7 @@ DAEMON_ARGS="                                                               \
 --tls-private-key-file={{ kube_apiserver_keyfile }}                         \
 --kubelet-certificate-authority={{ kube_apiserver_cafile }}                 \
 --client-ca-file={{ kube_apiserver_client_ca }}                             \
+--service-account-signing-key-file={{ kube_apiserver_cafile | dirname }}/service_account_key.pem \
+--service-account-key-file={{ kube_apiserver_cafile | dirname }}/service_account_cert.pem \
+--service-account-issuer=kubernetes                                         \
 "

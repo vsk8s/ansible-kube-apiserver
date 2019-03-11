@@ -22,3 +22,17 @@
   notify:
     - Reload systemd
     - Restart kube-apiserver
+
+- name: Install service account key
+  become: True
+  copy:
+    content: "{{ kube_apiserver_service_account[item] }}"
+    dest: "{{ kube_apiserver_cafile | dirname }}/service_account_{{ item }}.pem"
+    owner: root
+    group: root
+    mode: 0600
+  with_items:
+    - cert
+    - key
+  notify:
+    - Restart kube-apiserver

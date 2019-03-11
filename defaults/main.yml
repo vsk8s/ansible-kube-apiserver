@@ -12,3 +12,10 @@ kube_apiserver_certfile: /path
 kube_apiserver_keyfile: /path
 kube_apiserver_cafile: /path
 kube_apiserver_client_ca: /path
+
+# Generate a new pem key with
+# openssl req -x509 -sha256 -nodes -days 365000 -newkey rsa:4096 -keyout key -out cert
+# and place the content of the files in the variables
+kube_apiserver_service_account:
+  cert: pem-content
+  key: pem-content
