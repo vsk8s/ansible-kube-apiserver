@@ -3,7 +3,7 @@ Description=Kubernetes API Server
 
 [Service]
 EnvironmentFile=/etc/default/kube-apiserver
-ExecStart=/usr/bin/hyperkube apiserver $DAEMON_ARGS
+ExecStart=/usr/bin/hyperkube kube-apiserver $DAEMON_ARGS
 Restart=on-failure
 Type=simple
 
