@@ -36,3 +36,6 @@
     - key
   notify:
     - Restart kube-apiserver
+
+- name: Flush handlers
+  meta: flush_handlers
