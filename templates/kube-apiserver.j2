@@ -19,4 +19,12 @@ DAEMON_ARGS="                                                               \
 --service-account-signing-key-file={{ kube_apiserver_cafile | dirname }}/service_account_key.pem \
 --service-account-key-file={{ kube_apiserver_cafile | dirname }}/service_account_cert.pem \
 --service-account-issuer=kubernetes                                         \
+--requestheader-client-ca-file={{ kube_apiserver_request_header_client_ca }} \
+--requestheader-allowed-names=""                                            \
+--requestheader-extra-headers-prefix=X-Remote-Extra-                        \
+--requestheader-group-headers=X-Remote-Group                                \
+--requestheader-username-headers=X-Remote-User                              \
+--proxy-client-cert-file={{ kube_apiserver_request_header_certfile }}       \
+--proxy-client-key-file={{ kube_apiserver_request_header_keyfile }}         \
+--enable-aggregator-routing=true \
 "
