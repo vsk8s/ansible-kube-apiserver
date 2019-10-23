@@ -26,5 +26,5 @@ DAEMON_ARGS="                                                               \
 --requestheader-username-headers=X-Remote-User                              \
 --proxy-client-cert-file={{ kube_apiserver_request_header_certfile }}       \
 --proxy-client-key-file={{ kube_apiserver_request_header_keyfile }}         \
---enable-aggregator-routing=true \
+--enable-aggregator-routing=true                                            \
 "
