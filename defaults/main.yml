@@ -17,6 +17,15 @@ kube_apiserver_requestheader_client_ca: /path
 kube_apiserver_requestheader_certfile: /path
 kube_apiserver_requestheader_keyfile: /path
 
+kube_apiserver_enable_oidc: False
+kube_apiserver_oidc_issuer_url: https://change.me
+kube_apiserver_oidc_client_id: change-me
+kube_apiserver_oidc_username_claim: preferred_username
+kube_apiserver_oidc_groups_claim: groups
+kube_apiserver_oidc_username_prefix: "oidc:"
+kube_apiserver_oidc_groups_prefix: "oidc:"
+
+kube_apiserver_verbosity: 2
 # Generate a new pem key with
 # openssl req -x509 -sha256 -nodes -days 365000 -newkey rsa:4096 -keyout key -out cert
 # and place the content of the files in the variables
