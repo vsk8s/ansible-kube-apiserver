@@ -7,6 +7,7 @@ kube_apiserver_etcd_keyfile: /path
 kube_apiserver_etcd_certfile: /path
 
 kubernetes_service_cidr: "10.0.0.1/24"
+kubernetes_ipv6_enabled: False
 
 kube_apiserver_certfile: /path
 kube_apiserver_keyfile: /path
